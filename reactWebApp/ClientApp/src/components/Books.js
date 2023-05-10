@@ -20,15 +20,10 @@ export const Books = () => {
     })
 
     const renderBookNames = (books) => {
-        return (
-            <ul>
-                <li>{books[0].bookName}</li>
-                <li>{books[1].bookName}</li>
-                <li>{books[2].bookName}</li>
-                <li>{books[3].bookName}</li>
-            </ul>
-        
-        )}
+        return books.map((book) => {
+            return <li> {book.bookName} </li>
+        })
+    }
 
     return (
         <div>
