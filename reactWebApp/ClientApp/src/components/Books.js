@@ -1,5 +1,4 @@
 ﻿import React, { Component, useState, useEffect } from 'react';
-import { FetchData } from './FetchData';
 
 export const Books = () => {
     const [books, setBooks] = useState([]);
