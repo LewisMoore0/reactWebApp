@@ -3,13 +3,6 @@
 export const SubmitForm = () => {
 
     const [book, setBook] = useState({})
-    //const [price, setPrice] = useState(0)
-    //const [category, setCategory] = useState('')
-    //const [author, setAuthor] = useState('')
-
-    //async function sendData(url = "/api/books", data = bookData) {
-
-    //}
 
     async function postBook() {
         const response = await fetch('/api/books', {
@@ -22,22 +15,23 @@ export const SubmitForm = () => {
     return (
         <form onSubmit={postBook}>  
             <label>
-                Book Name:
+                Book Name:<br></br>
                 <input type="text" name="name" onChange={ e => setBook({...book, bookName: e.target.value })}/>
-            </label>
+            </label><br></br>
             <label>
-                Price:
+                Price:<br></br>
                 <input type="number" name="price" onChange={e => setBook({...book, price: e.target.value })}/>
-            </label>
+            </label><br></br>
             <label>
-                Category:
+                Category:<br></br>
                 <input type="text" name="category" onChange={e => setBook({ ...book, category: e.target.value })}/>
-            </label>
+            </label><br></br>
             <label>
-                Author:
+                Author:<br></br>
                 <input type="text" name="author" onChange={e => setBook({ ...book, author: e.target.value })}/>
-            </label>
+            </label><br></br>
             <input type="submit" value="Submit" />
-        </form>
+         </form>
+        
     )
 }
