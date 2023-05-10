@@ -27,9 +27,13 @@ export const Books = () => {
     }
 
     return (
-        <div>
-            {loading === true ? <p><em>Loading...</em></p> : renderBookNames(books)}
-            <SubmitForm />
-        </div>
+        <wrapper>
+            <div>
+                {loading === true ? <p><em>Loading...</em></p> : renderBookNames(books)}
+            </div>
+            <div style={{ padding: 10 }}>
+                <SubmitForm />
+            </div>  
+        </wrapper>
     )
 }
