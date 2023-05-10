@@ -23,17 +23,17 @@ export const Books = () => {
     const renderBookNames = (books) => {
         return (
             <ul>
-                <li>Something</li>
+                <li>{books[0].bookName}</li>
+                <li>{books[1].bookName}</li>
+                <li>{books[2].bookName}</li>
+                <li>{books[3].bookName}</li>
             </ul>
         
         )}
 
-    let contents = loading === true ? <p><em>Loading...</em></p> : {renderBookNames}
-
-
     return (
         <div>
-            
+            {loading === true ? <p><em>Loading...</em></p> : renderBookNames(books)}
         </div>
     )
 }
