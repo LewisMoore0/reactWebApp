@@ -1,4 +1,5 @@
 ﻿import React, { Component, useState, useEffect } from 'react';
+import { SubmitForm } from './SubmitForm';
 
 export const Books = () => {
     const [books, setBooks] = useState([]);
@@ -28,6 +29,7 @@ export const Books = () => {
     return (
         <div>
             {loading === true ? <p><em>Loading...</em></p> : renderBookNames(books)}
+            <SubmitForm />
         </div>
     )
 }
