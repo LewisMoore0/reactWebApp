@@ -22,7 +22,9 @@ export const Books = () => {
 
     const renderBookNames = (books) => {
         return books.map((book) => {
-            return <li> {book.bookName} </li>
+            return <ul>
+                <li><b>{book.bookName}:</b> Price - ${book.price}, Author - {book.author} </li>
+            </ul>
         })
     }
 
